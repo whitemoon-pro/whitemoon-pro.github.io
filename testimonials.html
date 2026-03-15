@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Submit a Testimonial | Whitemoon Pro Service LLC</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <img src="whitemoon-logo.png" alt="Whitemoon Pro Service LLC Logo" class="brand-logo" />
+      </a>
+      <nav class="nav">
+        <a href="index.html#about">About</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#why-us">Why Whitemoon</a>
+        <a href="index.html#testimonials">Testimonials</a>
+        <a href="testimonials.html">Submit Testimonial</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section reveal">
+      <div class="container">
+        <div class="section-header center">
+          <h2>Share Your Experience</h2>
+          <p>
+            Thank you for taking the time to share your feedback. Your testimonial helps us continue delivering
+            exceptional service to clubs, academies, and players across Central Florida.
+          </p>
+        </div>
+
+        <div class="contact-form reveal" style="max-width: 720px; margin: 0 auto;">
+          <form action="https://formspree.io/f/mreyqzol" method="POST">
+            
+            <div class="form-row">
+              <label for="name">Your Name</label>
+              <input id="name" type="text" name="name" placeholder="Your full name" required />
+            </div>
+
+            <div class="form-row">
+              <label for="role">Role / Title</label>
+              <input id="role" type="text" name="role" placeholder="Director, Coach, Parent, Player, etc." />
+            </div>
+
+            <div class="form-row">
+              <label for="organization">Organization / Club</label>
+              <input id="organization" type="text" name="organization" placeholder="Club, academy, or facility name" />
+            </div>
+
+            <div class="form-row">
+              <label for="testimonial">Your Testimonial</label>
+              <textarea id="testimonial" name="testimonial" rows="5" placeholder="Share your experience working with Whitemoon Pro Service" required></textarea>
+            </div>
+
+            <div class="form-row" style="margin-top: 1rem;">
+              <label style="display: flex; align-items: center; gap: .5rem;">
+                <input type="checkbox" name="consent" required />
+                I agree that my testimonial may be published on the Whitemoon Pro Service website.
+              </label>
+            </div>
+
+            <button type="submit" class="btn primary full-width" style="margin-top: 1.25rem;">
+              Submit Testimonial
+            </button>
+
+            <p class="form-note" style="margin-top: .75rem;">
+              Your testimonial will be sent securely to whitemoonpro@outlook.com.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <p class="footer-brand">Whitemoon Pro Service LLC</p>
+        <p>Professional Event Management for Tennis &amp; Racquet Sports</p>
+        <p>Central Florida • Expanding Nationwide</p>
+      </div>
+      <div class="footer-meta">
+        <p>© 2026 Whitemoon Pro Service LLC. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in-view");
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+  </script>
+</body>
+</html>
