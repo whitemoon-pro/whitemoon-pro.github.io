@@ -5,11 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Submit a Testimonial | Whitemoon Pro Service LLC</title>
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
-
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -17,13 +12,13 @@
   <header class="site-header">
     <div class="container header-inner">
       <a href="index.html" class="logo">
-        <img src="whitemoon-logo.png" alt="Whitemoon Pro Service LLC Logo" class="brand-logo" />
+        <img src="whitemoon-logo.png" class="brand-logo" alt="Whitemoon Logo" />
       </a>
       <nav class="nav">
         <a href="index.html#about">About</a>
         <a href="index.html#services">Services</a>
         <a href="index.html#why-us">Why Whitemoon</a>
-        <a href="index.html#testimonials">Testimonials</a>
+        <a href="testimonials-showcase.html">Testimonials</a>
         <a href="testimonials.html">Submit Testimonial</a>
         <a href="index.html#contact">Contact</a>
       </nav>
@@ -43,7 +38,9 @@
 
         <div class="contact-form reveal" style="max-width: 720px; margin: 0 auto;">
           <form action="https://formspree.io/f/mreyqzol" method="POST">
+            
             <input type="hidden" name="_redirect" value="https://whitemoon-pro.github.io/thank-you.html">
+
             <div class="form-row">
               <label for="name">Your Name</label>
               <input id="name" type="text" name="name" placeholder="Your full name" required />
@@ -86,27 +83,17 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <div>
-        <p class="footer-brand">Whitemoon Pro Service LLC</p>
-        <p>Professional Event Management for Tennis &amp; Racquet Sports</p>
-        <p>Central Florida • Expanding Nationwide</p>
-      </div>
-      <div class="footer-meta">
-        <p>© 2026 Whitemoon Pro Service LLC. All Rights Reserved.</p>
-      </div>
+      <p class="footer-brand">Whitemoon Pro Service LLC</p>
+      <p>© 2026 All Rights Reserved.</p>
     </div>
   </footer>
 
   <script>
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("in-view");
-        }
-      });
+      entries.forEach(entry => entry.isIntersecting && entry.target.classList.add("in-view"));
     }, { threshold: 0.15 });
 
-    document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+    document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
   </script>
 </body>
 </html>
