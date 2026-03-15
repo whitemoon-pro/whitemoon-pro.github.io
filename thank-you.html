@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You | Whitemoon Pro Service LLC</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <img src="whitemoon-logo.png" class="brand-logo" alt="Whitemoon Logo" />
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="section reveal">
+      <div class="container" style="text-align:center; max-width:700px; margin:0 auto;">
+        <h2>Thank You!</h2>
+        <p style="color:var(--text-muted); font-size:1.1rem;">
+          Your testimonial has been submitted successfully.  
+          We appreciate your time and your trust in Whitemoon Pro Service LLC.
+        </p>
+
+        <a href="index.html" class="btn primary" style="margin-top:1.5rem;">Return to Home</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-brand">Whitemoon Pro Service LLC</p>
+      <p>© 2026 All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => entry.isIntersecting && entry.target.classList.add("in-view"));
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
